@@ -1,11 +1,9 @@
-// ============================================================
-// BENKACEM CHBANI — PREMIUM 3D PORTFOLIO — SCRIPT
-// ============================================================
+
 
 (function () {
     'use strict';
 
-    // ===== Loading Screen =====
+
     var loader = document.getElementById('loader');
 
     window.addEventListener('load', function () {
@@ -14,7 +12,7 @@
         }, 2200);
     });
 
-    // ===== Custom Cursor =====
+   
     var cursorDot = document.getElementById('cursorDot');
     var cursorRing = document.getElementById('cursorRing');
     var mouseX = 0, mouseY = 0;
@@ -37,7 +35,7 @@
         }
         animateCursorRing();
 
-        // Hover effect on interactive elements
+        
         var hoverElements = document.querySelectorAll('a, button, .skill-item, .project-card, .quality-card, .learned-card, .info-item, .contact-item, input, textarea');
         hoverElements.forEach(function (el) {
             el.addEventListener('mouseenter', function () {
@@ -51,13 +49,13 @@
         });
     }
 
-    // ===== Navbar =====
+  
     var navbar = document.getElementById('navbar');
     var menuToggle = document.getElementById('menuToggle');
     var navLinks = document.getElementById('navLinks');
     var allNavLinks = document.querySelectorAll('.nav-link');
 
-    // Scroll effect
+
     window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -66,14 +64,14 @@
         }
     });
 
-    // Mobile menu toggle
+   
     menuToggle.addEventListener('click', function () {
         menuToggle.classList.toggle('active');
         navLinks.classList.toggle('open');
         document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
     });
 
-    // Nav link clicks
+   
     allNavLinks.forEach(function (link) {
         link.addEventListener('click', function () {
             allNavLinks.forEach(function (l) { l.classList.remove('active'); });
@@ -84,7 +82,7 @@
         });
     });
 
-    // Active nav link on scroll
+   
     var sections = document.querySelectorAll('section[id]');
 
     function highlightNavOnScroll() {
@@ -108,7 +106,7 @@
 
     window.addEventListener('scroll', highlightNavOnScroll);
 
-    // ===== Hero Particles =====
+   
     var heroParticles = document.getElementById('heroParticles');
 
     function createParticles() {
@@ -131,7 +129,7 @@
     }
     createParticles();
 
-    // ===== Scroll Animations (Intersection Observer) =====
+
     var animElements = document.querySelectorAll('.animate-on-scroll');
 
     if ('IntersectionObserver' in window) {
@@ -157,7 +155,7 @@
         });
     }
 
-    // ===== 3D Tilt Effect on Cards =====
+   
     var tiltElements = document.querySelectorAll('[data-tilt]');
 
     if (window.innerWidth > 768) {
@@ -180,7 +178,7 @@
         });
     }
 
-    // ===== Contact Form =====
+    
     var contactForm = document.getElementById('contactForm');
 
     if (contactForm) {
@@ -203,7 +201,6 @@
         });
     }
 
-    // ===== Smooth Scroll for Anchor Links =====
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
             var targetId = this.getAttribute('href');
@@ -223,7 +220,6 @@
         });
     });
 
-    // ===== Parallax on Hero floating shapes =====
     if (window.innerWidth > 768) {
         window.addEventListener('scroll', function () {
             var scrolled = window.scrollY;
@@ -235,7 +231,7 @@
         });
     }
 
-    // ===== Stagger animation delays for grid children =====
+
     function addStaggerDelays(parentSelector, childSelector) {
         var parents = document.querySelectorAll(parentSelector);
         parents.forEach(function (parent) {
